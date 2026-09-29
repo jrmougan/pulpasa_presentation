@@ -1,0 +1,23 @@
+[tools]
+node = "24.21.0" # Alineado con el resto de proyectos (antes: node:22 en el devcontainer).
+pnpm = "10.34.4" # Igual que packageManager en package.json; lockfile v9.
+
+[tasks.setup]
+description = "Instalar dependencias desde el lockfile"
+run = "pnpm install --frozen-lockfile"
+
+[tasks.dev]
+description = "Servidor de Slidev (--open --remote; admite --port)"
+run = "pnpm dev"
+
+[tasks.build]
+description = "Generar la presentación estática en dist/"
+run = "pnpm build"
+
+[tasks.check]
+description = "Validar compilando (no hay lint ni tests)"
+run = "pnpm build"
+
+[tasks.export]
+description = "Exportar a PDF (opcional: requiere playwright-chromium)"
+run = "pnpm export"
