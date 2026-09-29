@@ -1,4 +1,5 @@
-FROM node:22
+# Keep in sync with mise.toml ([tools] node / pnpm).
+FROM node:24.21.0
 
 # Install basic development tools
 RUN apt update && apt install -y less man-db sudo
@@ -8,10 +9,8 @@ ARG USERNAME=node
 RUN echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
-# update npm to the latest version
-RUN npm install -g npm@latest
-# Install pnpm
-RUN npm install -g pnpm
+# Pinned pnpm (same as packageManager in package.json); npm stays the bundled one.
+RUN npm install -g pnpm@10.34.4
 
 # Set `DEVCONTAINER` environment variable to help with orientation
 ENV DEVCONTAINER=true
