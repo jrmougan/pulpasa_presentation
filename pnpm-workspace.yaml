@@ -1,0 +1,5 @@
+# pnpm settings (pnpm >= 11 no longer reads them from .npmrc).
+shamefullyHoist: true
+autoInstallPeers: true
+allowBuilds:
+  esbuild: true

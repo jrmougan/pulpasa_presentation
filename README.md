@@ -11,7 +11,7 @@ mise run setup
 mise run dev
 ```
 
-`mise.toml` pins Node 24.21.0 and pnpm 10.34.4 (the same version as
+`mise.toml` pins Node 26.13.1 and pnpm 12.21.0 (the same version as
 `packageManager` in `package.json`). `setup` runs `pnpm install --frozen-lockfile`.
 Then visit <http://localhost:3030>.
 
