@@ -18,8 +18,8 @@ drawings:
   persist: false
 # slide transition: https://sli.dev/guide/animations.html#slide-transitions
 transition: slide-left
-# enable MDC Syntax: https://sli.dev/features/mdc
-mdc: true
+# enable Comark (formerly MDC) syntax: https://sli.dev/features/mdc
+comark: true
 # open graph
 # seoMeta:
 #  ogImage: https://cover.sli.dev
