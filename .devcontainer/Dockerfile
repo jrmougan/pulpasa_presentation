@@ -10,7 +10,7 @@ RUN echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
 # Pinned pnpm (same as packageManager in package.json); npm stays the bundled one.
-RUN npm install -g pnpm@11.28.12
+RUN npm install -g pnpm@12.21.0
 
 # Set `DEVCONTAINER` environment variable to help with orientation
 ENV DEVCONTAINER=true
