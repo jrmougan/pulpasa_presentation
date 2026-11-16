@@ -1,6 +1,7 @@
 [tools]
-node = "24.21.0" # Alineado con el resto de proyectos (antes: node:22 en el devcontainer).
-pnpm = "10.34.4" # Igual que packageManager en package.json; lockfile v9.
+node = "26.13.1" # Última LTS (Lithium); antes 24.21.0. Igual que el devcontainer y netlify.toml.
+pnpm = "11.28.12" # Igual que packageManager en package.json; ajustes en pnpm-workspace.yaml (lockfile v9).
+# pnpm 12 no: sus shims de .bin apuntan a node_modules/.pnpm/... y @slidev/cli 51 se cree "global" (falla el build).
 
 [tasks.setup]
 description = "Instalar dependencias desde el lockfile"
